@@ -17,9 +17,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const MyHomePage(),
-      debugShowCheckedModeBanner: false,
-    );
+        home: const MyHomePage(),
+        debugShowCheckedModeBanner: false,
+        routes: {
+          '/amamentacao': (_) => Amamentacao(),
+          '/ordenha': (_) => OrdenhaSeio(),
+          '/cuidadoRecemNascidos': (_) => CuidadosRecem(),
+          '/sobreNos': (_) => SobreNos(),
+        });
   }
 }
 
@@ -39,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       drawer: MenuSuperior(),
       appBar: AppBar(
-        title: const Text('Amamente Com amor'),
+        title: const Text('Amamente Com Amor'),
         backgroundColor: Color.fromARGB(255, 238, 149, 161),
       ),
       body: Column(
@@ -49,7 +54,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Column(
               children: [
                 GestureDetector(
-                  onTap: () => selectedItemPrincipal(context, 0),
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/amamentacao');
+                  },
                   child: Container(
                     alignment: Alignment.centerLeft,
                     padding: const EdgeInsets.all(50),
@@ -80,7 +87,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () => selectedItemPrincipal(context, 1),
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/ordenha');
+                  },
                   child: Container(
                     alignment: Alignment.centerLeft,
                     padding: const EdgeInsets.all(50),
@@ -107,7 +116,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () => selectedItemPrincipal(context, 2),
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/cuidadoRecemNascidos');
+                  },
                   child: Container(
                     alignment: Alignment.centerLeft,
                     padding: const EdgeInsets.all(40),
@@ -134,7 +145,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () => selectedItemPrincipal(context, 3),
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/sobreNos');
+                  },
                   child: Container(
                     alignment: Alignment.centerLeft,
                     padding: const EdgeInsets.all(50),
@@ -173,32 +186,5 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
     );
-  }
-}
-
-void selectedItemPrincipal(BuildContext context, int index) {
-  Navigator.of(context).pop();
-
-  switch (index) {
-    case 0:
-      Navigator.of(context).push(MaterialPageRoute(
-        builder: (context) => Amamentacao(),
-      ));
-      break;
-    case 1:
-      Navigator.of(context).push(MaterialPageRoute(
-        builder: (context) => OrdenhaSeio(),
-      ));
-      break;
-    case 2:
-      Navigator.of(context).push(MaterialPageRoute(
-        builder: (context) => CuidadosRecem(),
-      ));
-      break;
-    case 3:
-      Navigator.of(context).push(MaterialPageRoute(
-        builder: (context) => SobreNos(),
-      ));
-      break;
   }
 }

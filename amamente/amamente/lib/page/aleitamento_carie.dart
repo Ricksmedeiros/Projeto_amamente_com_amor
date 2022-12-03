@@ -14,41 +14,82 @@ class AleitamentoCarie extends StatelessWidget {
 }
 
 Widget botao() {
-  return Container(
-    alignment: Alignment.center,
-    child: Column(
-      children: [
-        SizedBox(
-          height: 80,
-        ),
-        ElevatedButton.icon(
-          // <-- ElevatedButton
-          onPressed: () {},
-          icon: Icon(
-            Icons.download,
-            size: 50.0,
-          ),
-          label: Text('Download'),
-        ),
-        TextButton.icon(
-          // <-- TextButton
-          onPressed: () {},
-          icon: Icon(
-            Icons.download,
-            size: 24.0,
-          ),
-          label: Text('Download'),
-        ),
-        OutlinedButton.icon(
-          // <-- OutlinedButton
-          onPressed: () {},
-          icon: Icon(
-            Icons.download,
-            size: 24.0,
-          ),
-          label: Text('Download'),
-        ),
-      ],
+  return Center(
+    child: Padding(
+      padding: const EdgeInsets.fromLTRB(10, 40, 10, 10),
+      child: Column(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: <Widget>[
+          ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStatePropertyAll<Color>(
+                    Color.fromARGB(255, 238, 149, 161)),
+                fixedSize: MaterialStateProperty.all<Size>(Size(250, 60)),
+                shape: MaterialStateProperty.all(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                ),
+              ),
+              onPressed: () {},
+              child: Text(
+                "Causas",
+                textDirection: TextDirection.ltr,
+              )),
+          SizedBox(height: 30),
+          ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStatePropertyAll<Color>(
+                    Color.fromARGB(255, 238, 149, 161)),
+                fixedSize: MaterialStateProperty.all<Size>(Size(250, 60)),
+                shape: MaterialStateProperty.all(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                ),
+              ),
+              onPressed: () {},
+              child: Text(
+                "Primeiros sinais",
+                textDirection: TextDirection.ltr,
+              )),
+          SizedBox(height: 30),
+          ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStatePropertyAll<Color>(
+                    Color.fromARGB(255, 238, 149, 161)),
+                fixedSize: MaterialStateProperty.all<Size>(Size(250, 60)),
+                shape: MaterialStateProperty.all(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                ),
+              ),
+              onPressed: () {},
+              child: Text(
+                "Meios de prevenção",
+                textDirection: TextDirection.ltr,
+              )),
+          SizedBox(height: 30),
+          ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStatePropertyAll<Color>(
+                    Color.fromARGB(255, 238, 149, 161)),
+                fixedSize: MaterialStateProperty.all<Size>(Size(250, 60)),
+                shape: MaterialStateProperty.all(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                ),
+              ),
+              onPressed: () {},
+              child: Text(
+                "higiene bucal do bebê",
+                textDirection: TextDirection.ltr,
+              )),
+        ],
+      ),
     ),
   );
 }

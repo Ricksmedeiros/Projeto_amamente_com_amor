@@ -14,13 +14,62 @@ class OrdenhaSeio extends StatelessWidget {
 }
 
 Widget botao() {
-  return Column(
-    mainAxisSize: MainAxisSize.min,
-    children: <Widget>[
-      IconButton(
-          icon: const Icon(Icons.volume_up),
-          tooltip: 'Increase volume by 10',
-          onPressed: () {}),
-    ],
+  return Center(
+    child: Padding(
+      padding: const EdgeInsets.fromLTRB(10, 40, 10, 10),
+      child: Column(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: <Widget>[
+          ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStatePropertyAll<Color>(
+                    Color.fromARGB(255, 238, 149, 161)),
+                fixedSize: MaterialStateProperty.all<Size>(Size(250, 60)),
+                shape: MaterialStateProperty.all(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                ),
+              ),
+              onPressed: () {},
+              child: Text("Como realizar")),
+          SizedBox(height: 30),
+          ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStatePropertyAll<Color>(
+                    Color.fromARGB(255, 238, 149, 161)),
+                fixedSize: MaterialStateProperty.all<Size>(Size(250, 60)),
+                shape: MaterialStateProperty.all(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                ),
+              ),
+              onPressed: () {},
+              child: Text(
+                "Como armazenar",
+                textDirection: TextDirection.ltr,
+              )),
+          SizedBox(height: 30),
+          ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStatePropertyAll<Color>(
+                    Color.fromARGB(255, 238, 149, 161)),
+                fixedSize: MaterialStateProperty.all<Size>(Size(250, 60)),
+                shape: MaterialStateProperty.all(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
+                ),
+              ),
+              onPressed: () {},
+              child: Text(
+                "Degelo",
+                textDirection: TextDirection.ltr,
+              )),
+        ],
+      ),
+    ),
   );
 }
