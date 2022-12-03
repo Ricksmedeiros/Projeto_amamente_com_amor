@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:amamente/widget/botao_widget.dart';
 import 'package:amamente/widget/Menu_Superior.dart';
 import 'package:amamente/page/amamentacao.dart';
 import 'package:amamente/page/ordenha_seio.dart';
@@ -48,105 +47,117 @@ class _MyHomePageState extends State<MyHomePage> {
           Expanded(
             child: SingleChildScrollView(
                 child: Column(
-              children: <Widget>[
-                Container(
-                  alignment: Alignment.centerLeft,
-                  padding: const EdgeInsets.all(50),
-                  height: 200,
-                  color: Color.fromARGB(255, 202, 123, 134),
-                  child: Row(
-                    children: <Widget>[
-                      Image.asset(
-                        'assets/images/logo.png',
-                        height: 45,
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      const Text(
-                        'Amamentação',
-                        textAlign: TextAlign.start,
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                    ],
+              children: [
+                GestureDetector(
+                  onTap: () => selectedItemPrincipal(context, 0),
+                  child: Container(
+                    alignment: Alignment.centerLeft,
+                    padding: const EdgeInsets.all(50),
+                    height: 200,
+                    color: Color.fromARGB(255, 202, 123, 134),
+                    child: Row(
+                      children: <Widget>[
+                        Image.asset(
+                          'assets/images/logo.png',
+                          height: 45,
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        const Text(
+                          'Amamentação',
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-                Container(
-                  alignment: Alignment.centerLeft,
-                  padding: const EdgeInsets.all(50),
-                  height: 200,
-                  color: Color.fromARGB(255, 245, 142, 156),
-                  child: Row(
-                    children: <Widget>[
-                      Image.asset('assets/images/logo.png'),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      const Text(
-                        'Ordenha de Leite do seio',
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                    ],
+                GestureDetector(
+                  onTap: () => selectedItemPrincipal(context, 1),
+                  child: Container(
+                    alignment: Alignment.centerLeft,
+                    padding: const EdgeInsets.all(50),
+                    height: 200,
+                    color: Color.fromARGB(255, 245, 142, 156),
+                    child: Row(
+                      children: <Widget>[
+                        Image.asset('assets/images/logo.png'),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        const Text(
+                          'Ordenha de Leite do seio',
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-                Container(
-                  alignment: Alignment.centerLeft,
-                  padding: const EdgeInsets.all(40),
-                  height: 200,
-                  color: Color.fromARGB(255, 241, 164, 174),
-                  child: Row(
-                    children: <Widget>[
-                      Image.asset('assets/images/logo.png'),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      const Text(
-                        'Cuidados com o recém-nascido',
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                    ],
+                GestureDetector(
+                  onTap: () => selectedItemPrincipal(context, 2),
+                  child: Container(
+                    alignment: Alignment.centerLeft,
+                    padding: const EdgeInsets.all(40),
+                    height: 200,
+                    color: Color.fromARGB(255, 241, 164, 174),
+                    child: Row(
+                      children: <Widget>[
+                        Image.asset('assets/images/logo.png'),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        const Text(
+                          'Cuidados com o recém-nascido',
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-                Container(
-                  alignment: Alignment.centerLeft,
-                  padding: const EdgeInsets.all(50),
-                  height: 200,
-                  color: Color.fromARGB(255, 247, 174, 184),
-                  child: Row(
-                    children: <Widget>[
-                      Image.asset('assets/images/logo.png'),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      const Text(
-                        'Sobre nós',
-                        style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                    ],
+                GestureDetector(
+                  onTap: () => selectedItemPrincipal(context, 3),
+                  child: Container(
+                    alignment: Alignment.centerLeft,
+                    padding: const EdgeInsets.all(50),
+                    height: 200,
+                    color: Color.fromARGB(255, 247, 174, 184),
+                    child: Row(
+                      children: <Widget>[
+                        Image.asset('assets/images/logo.png'),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        const Text(
+                          'Sobre nós',
+                          style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -165,7 +176,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-void selectedItem(BuildContext context, int index) {
+void selectedItemPrincipal(BuildContext context, int index) {
   Navigator.of(context).pop();
 
   switch (index) {

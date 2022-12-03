@@ -1,35 +1,26 @@
 import 'package:flutter/material.dart';
 
-class ButtonWidget extends StatelessWidget {
-  final IconData icon;
-  final String text;
-  final VoidCallback onClicked;
-
-  const ButtonWidget({
-    Key? key,
-    required this.icon,
-    required this.text,
-    required this.onClicked,
-  }) : super(key: key);
-
+class OrdenhaSeio extends StatelessWidget {
   @override
-  Widget build(BuildContext context) => ElevatedButton(
-        style: ElevatedButton.styleFrom(
-          minimumSize: Size.fromHeight(50),
+  Widget build(BuildContext context) => Scaffold(
+        //drawer: NavigationDrawerWidget(),
+        appBar: AppBar(
+          title: Text('Ordenha Do seio'),
+          centerTitle: true,
+          backgroundColor: Color.fromARGB(255, 238, 149, 161),
         ),
-        child: buildContent(),
-        onPressed: onClicked,
+        body: botao(),
       );
+}
 
-  Widget buildContent() => Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(icon, size: 28),
-          SizedBox(width: 16),
-          Text(
-            text,
-            style: TextStyle(fontSize: 22, color: Colors.white),
-          ),
-        ],
-      );
+Widget botao() {
+  return Column(
+    mainAxisSize: MainAxisSize.min,
+    children: <Widget>[
+      IconButton(
+          icon: const Icon(Icons.volume_up),
+          tooltip: 'Increase volume by 10',
+          onPressed: () {}),
+    ],
+  );
 }

@@ -105,13 +105,11 @@ class MenuSuperior extends StatelessWidget {
     required IconData icon,
     VoidCallback? onClicked,
   }) {
-    final color = Colors.white;
-    final hoverColor = Colors.white70;
+    final color = Color.fromARGB(255, 248, 247, 247);
 
     return ListTile(
       leading: Icon(icon, color: color),
       title: Text(text, style: TextStyle(color: color)),
-      hoverColor: hoverColor,
       onTap: onClicked,
     );
   }

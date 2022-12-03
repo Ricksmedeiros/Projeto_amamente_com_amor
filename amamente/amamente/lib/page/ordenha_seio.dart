@@ -9,5 +9,18 @@ class OrdenhaSeio extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Color.fromARGB(255, 238, 149, 161),
         ),
+        body: botao(),
       );
+}
+
+Widget botao() {
+  return Column(
+    mainAxisSize: MainAxisSize.min,
+    children: <Widget>[
+      IconButton(
+          icon: const Icon(Icons.volume_up),
+          tooltip: 'Increase volume by 10',
+          onPressed: () {}),
+    ],
+  );
 }
