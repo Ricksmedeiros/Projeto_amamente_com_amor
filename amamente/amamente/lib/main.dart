@@ -88,9 +88,6 @@ class _MyHomePageState extends State<MyHomePage> {
                               fontWeight: FontWeight.bold,
                               color: Colors.white),
                         ),
-                        const SizedBox(
-                          height: 10,
-                        ),
                       ],
                     ),
                   ),
@@ -123,9 +120,6 @@ class _MyHomePageState extends State<MyHomePage> {
                               fontSize: 21,
                               fontWeight: FontWeight.bold,
                               color: Colors.white),
-                        ),
-                        const SizedBox(
-                          height: 10,
                         ),
                       ],
                     ),
@@ -160,9 +154,6 @@ class _MyHomePageState extends State<MyHomePage> {
                               fontWeight: FontWeight.bold,
                               color: Colors.white),
                         ),
-                        const SizedBox(
-                          height: 10,
-                        ),
                       ],
                     ),
                   ),
@@ -196,9 +187,6 @@ class _MyHomePageState extends State<MyHomePage> {
                               fontWeight: FontWeight.bold,
                               color: Colors.white),
                         ),
-                        const SizedBox(
-                          height: 10,
-                        ),
                       ],
                     ),
                   ),
@@ -222,9 +210,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
-                ),
-                const SizedBox(
-                  height: 10,
                 ),
               ],
             ),

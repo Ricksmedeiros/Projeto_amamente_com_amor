@@ -29,13 +29,13 @@ class MenuSuperior extends StatelessWidget {
                   buildMenuItem(
                     text: 'Tipos de aleitamento Materno',
                     icon: Icons.favorite_border,
-                    onClicked: () => selectedItem(context, 1),
+                    onClicked: () => selectedItem(context, 0),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'Anatomia e físiologia das mamas',
                     icon: Icons.favorite_border,
-                    onClicked: () => selectedItem(context, 2),
+                    onClicked: () => selectedItem(context, 1),
                   ),
                   const SizedBox(height: 16),
                   buildMenuItem(
@@ -49,7 +49,7 @@ class MenuSuperior extends StatelessWidget {
                     icon: Icons.favorite_border,
                     onClicked: () => selectedItem(context, 3),
                   ),
-                  const SizedBox(height: 24),
+                  const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'Tipos de mamilos',
                     icon: Icons.favorite_border,
@@ -61,6 +61,7 @@ class MenuSuperior extends StatelessWidget {
                     icon: Icons.favorite_border,
                     onClicked: () => selectedItem(context, 5),
                   ),
+                  const SizedBox(height: 16),
                   buildMenuItem(
                     text: 'Aleitamento e cárie dentária',
                     icon: Icons.favorite_border,

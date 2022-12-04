@@ -86,7 +86,6 @@ Widget botao() {
               onPressed: () {},
               child: Text(
                 "Misto ou parcial",
-                textDirection: TextDirection.ltr,
               )),
         ],
       ),
