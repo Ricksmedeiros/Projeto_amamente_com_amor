@@ -1,5 +1,5 @@
+import 'package:amamente/page/splash.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:amamente/widget/Menu_Superior.dart';
 import 'package:amamente/page/amamentacao.dart';
 import 'package:amamente/page/ordenha_seio.dart';
@@ -19,7 +19,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         home: const MyHomePage(),
         debugShowCheckedModeBanner: false,
+        initialRoute: '/splash',
         routes: {
+          '/splash': (context) => const Splash(),
           '/amamentacao': (_) => Amamentacao(),
           '/ordenha': (_) => OrdenhaSeio(),
           '/cuidadoRecemNascidos': (_) => CuidadosRecem(),
@@ -61,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     alignment: Alignment.centerLeft,
                     padding: const EdgeInsets.all(50),
                     height: 200,
-                    color: Color.fromARGB(255, 202, 123, 134),
+                    color: Color.fromARGB(255, 219, 124, 137),
                     child: Row(
                       children: <Widget>[
                         Image.asset(
@@ -75,7 +77,14 @@ class _MyHomePageState extends State<MyHomePage> {
                           'Amamentação',
                           textAlign: TextAlign.start,
                           style: TextStyle(
-                              fontSize: 20,
+                              shadows: [
+                                Shadow(
+                                  blurRadius: 10.0,
+                                  color: Colors.pinkAccent,
+                                  offset: Offset(5.0, 5.0),
+                                ),
+                              ],
+                              fontSize: 21,
                               fontWeight: FontWeight.bold,
                               color: Colors.white),
                         ),
@@ -104,7 +113,14 @@ class _MyHomePageState extends State<MyHomePage> {
                         const Text(
                           'Ordenha de Leite do seio',
                           style: TextStyle(
-                              fontSize: 20,
+                              shadows: [
+                                Shadow(
+                                  blurRadius: 10.0,
+                                  color: Colors.pinkAccent,
+                                  offset: Offset(5.0, 5.0),
+                                ),
+                              ],
+                              fontSize: 21,
                               fontWeight: FontWeight.bold,
                               color: Colors.white),
                         ),
@@ -133,7 +149,14 @@ class _MyHomePageState extends State<MyHomePage> {
                         const Text(
                           'Cuidados com o recém-nascido',
                           style: TextStyle(
-                              fontSize: 20,
+                              shadows: [
+                                Shadow(
+                                  blurRadius: 10.0,
+                                  color: Colors.pinkAccent,
+                                  offset: Offset(5.0, 5.0),
+                                ),
+                              ],
+                              fontSize: 21,
                               fontWeight: FontWeight.bold,
                               color: Colors.white),
                         ),
@@ -162,7 +185,14 @@ class _MyHomePageState extends State<MyHomePage> {
                         const Text(
                           'Sobre nós',
                           style: TextStyle(
-                              fontSize: 20,
+                              shadows: [
+                                Shadow(
+                                  blurRadius: 10.0,
+                                  color: Colors.pinkAccent,
+                                  offset: Offset(5.0, 5.0),
+                                ),
+                              ],
+                              fontSize: 21,
                               fontWeight: FontWeight.bold,
                               color: Colors.white),
                         ),
@@ -177,12 +207,28 @@ class _MyHomePageState extends State<MyHomePage> {
             )),
           ),
           Container(
-              height: 50,
-              color: Color.fromARGB(255, 230, 163, 172),
-              child: Center(
-                  child: Text("Projeto Uenp",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, color: Colors.white)))),
+            height: 50,
+            color: Color.fromARGB(255, 240, 188, 195),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Image.asset('assets/images/logo_uenp.png'),
+                const SizedBox(
+                  height: 10,
+                ),
+                const Text(
+                  'Projeto UENP',
+                  style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );

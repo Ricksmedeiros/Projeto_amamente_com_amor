@@ -29,7 +29,7 @@ Widget letras() {
  
    Com esse aplicativo você terá um conteúdo didático de forma 100% confiável e acesso durante as 24 horas do dia, se tornando excelente aliado às mães, e o melhor de tudo é que ele é um app ofertado de forma gratuita, sendo necessário fazer somente o cadastro para utilizá-lo.
 ''',
-            textAlign: TextAlign.left,
+            textAlign: TextAlign.center,
             textDirection: TextDirection.ltr,
             style: TextStyle(
               color: Color.fromARGB(255, 238, 149, 161),
