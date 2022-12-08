@@ -1,3 +1,6 @@
+import 'package:amamente/secundaryPage/complementado.dart';
+import 'package:amamente/secundaryPage/misto_parcial.dart';
+import 'package:amamente/secundaryPage/predominante.dart';
 import 'package:flutter/material.dart';
 import '../secundaryPage/exclusivo.dart';
 
@@ -50,7 +53,7 @@ Widget botao(BuildContext context) {
                   ),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () => selectedItem(context, 1),
               child: Text(
                 "Predominante",
                 textDirection: TextDirection.ltr,
@@ -67,7 +70,7 @@ Widget botao(BuildContext context) {
                   ),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () => selectedItem(context, 2),
               child: Text(
                 "Complementado",
                 textDirection: TextDirection.ltr,
@@ -84,7 +87,7 @@ Widget botao(BuildContext context) {
                   ),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () => selectedItem(context, 3),
               child: Text(
                 "Misto ou parcial",
               )),
@@ -101,6 +104,21 @@ void selectedItem(BuildContext context, int index) {
     case 0:
       Navigator.of(context).push(MaterialPageRoute(
         builder: (context) => Exclusivo(),
+      ));
+      break;
+    case 1:
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => Predominante(),
+      ));
+      break;
+    case 2:
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => Complementado(),
+      ));
+      break;
+    case 3:
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => MistoOuParcial(),
       ));
       break;
   }

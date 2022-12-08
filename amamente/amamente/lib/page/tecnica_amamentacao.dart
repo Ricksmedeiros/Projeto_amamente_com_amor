@@ -1,3 +1,6 @@
+import 'package:amamente/secundaryPage/pontosImportantes.dart';
+import 'package:amamente/secundaryPage/posicionamento.dart';
+import 'package:amamente/secundaryPage/posturaCorreta.dart';
 import 'package:flutter/material.dart';
 
 class TecnicaDeAmamentacao extends StatelessWidget {
@@ -9,11 +12,11 @@ class TecnicaDeAmamentacao extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Color.fromARGB(255, 238, 149, 161),
         ),
-        body: botao(),
+        body: botao(context),
       );
 }
 
-Widget botao() {
+Widget botao(BuildContext context) {
   return Center(
     child: Padding(
       padding: const EdgeInsets.fromLTRB(10, 40, 10, 10),
@@ -32,7 +35,7 @@ Widget botao() {
                   ),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () => selectedItem(context, 0),
               child: Text(
                 "Postura correta",
                 textDirection: TextDirection.ltr,
@@ -49,7 +52,7 @@ Widget botao() {
                   ),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () => selectedItem(context, 1),
               child: Text(
                 "Posicionamento do bebê",
                 textDirection: TextDirection.ltr,
@@ -66,7 +69,7 @@ Widget botao() {
                   ),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () => selectedItem(context, 2),
               child: Text(
                 "Pontos importantes",
                 textDirection: TextDirection.ltr,
@@ -75,4 +78,26 @@ Widget botao() {
       ),
     ),
   );
+}
+
+void selectedItem(BuildContext context, int index) {
+  Navigator.of(context).pop();
+
+  switch (index) {
+    case 0:
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => PosturaCorreta(),
+      ));
+      break;
+    case 1:
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => Posicionamento(),
+      ));
+      break;
+    case 2:
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => PontosImportantes(),
+      ));
+      break;
+  }
 }

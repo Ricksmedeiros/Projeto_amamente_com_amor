@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class SComposicaoInterna extends StatelessWidget {
+class ComposicaoInterna extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(

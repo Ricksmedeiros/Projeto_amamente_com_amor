@@ -1,3 +1,7 @@
+import 'package:amamente/secundaryPage/banhoRescemnascido.dart';
+import 'package:amamente/secundaryPage/calendarioVacinal.dart';
+import 'package:amamente/secundaryPage/manobrasDesengasgo.dart';
+import 'package:amamente/secundaryPage/trocaDeFraudas.dart';
 import 'package:flutter/material.dart';
 
 class CuidadosRecem extends StatelessWidget {
@@ -9,11 +13,11 @@ class CuidadosRecem extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Color.fromARGB(255, 238, 149, 161),
         ),
-        body: botao(),
+        body: botao(context),
       );
 }
 
-Widget botao() {
+Widget botao(BuildContext context) {
   return Center(
     child: Padding(
       padding: const EdgeInsets.fromLTRB(10, 40, 10, 10),
@@ -32,7 +36,7 @@ Widget botao() {
                   ),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () => selectedItem(context, 0),
               child: Text("Caledário vacinal")),
           SizedBox(height: 30),
           ElevatedButton(
@@ -46,7 +50,7 @@ Widget botao() {
                   ),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () => selectedItem(context, 1),
               child: Text(
                 "Manobras de desengasgo",
                 textDirection: TextDirection.ltr,
@@ -63,9 +67,9 @@ Widget botao() {
                   ),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () => selectedItem(context, 2),
               child: Text(
-                "troca de frauda",
+                "Troca de frauda",
                 textDirection: TextDirection.ltr,
               )),
           SizedBox(height: 30),
@@ -80,9 +84,9 @@ Widget botao() {
                   ),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () => selectedItem(context, 3),
               child: Text(
-                "Banho em rescem-nascidos",
+                "Banho em recém-nascidos",
                 textDirection: TextDirection.ltr,
               )),
           SizedBox(height: 30),
@@ -97,7 +101,7 @@ Widget botao() {
                   ),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () => selectedItem(context, 4),
               child: Text(
                 "Cuidados com o coto umbilical",
                 textDirection: TextDirection.ltr,
@@ -106,4 +110,36 @@ Widget botao() {
       ),
     ),
   );
+}
+
+void selectedItem(BuildContext context, int index) {
+  Navigator.of(context).pop();
+
+  switch (index) {
+    case 0:
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => CalendarioVacinal(),
+      ));
+      break;
+    case 1:
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => ManobraDesengasgo(),
+      ));
+      break;
+    case 2:
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => TrocaDeFraudas(),
+      ));
+      break;
+    case 3:
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => BanhoRecem(),
+      ));
+      break;
+    case 4:
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => CuidadosRecem(),
+      ));
+      break;
+  }
 }

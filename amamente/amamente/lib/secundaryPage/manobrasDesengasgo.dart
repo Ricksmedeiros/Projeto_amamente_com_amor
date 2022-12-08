@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class DoresMamilos extends StatelessWidget {
+class ManobraDesengasgo extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          title: Text('Dores nos mamilos'),
+          title: Text('Manobras De desengasgo'),
           centerTitle: true,
           backgroundColor: Color.fromARGB(255, 238, 149, 161),
         ),
@@ -23,7 +23,7 @@ Widget letras() {
         child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Text(
-            '''  Finge que tem um texto grande ou alguma imagem aqui (LUGAR PARA POR TEXTOS GRANDES)''',
+            '''   Finge que tem um texto grande ou alguma imagem aqui (LUGAR PARA POR TEXTOS GRANDES)''',
             textAlign: TextAlign.center,
             textDirection: TextDirection.ltr,
             style: TextStyle(

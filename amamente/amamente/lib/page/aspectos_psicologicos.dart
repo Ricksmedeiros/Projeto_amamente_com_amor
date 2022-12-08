@@ -9,51 +9,33 @@ class AspectosPsicologicos extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Color.fromARGB(255, 238, 149, 161),
         ),
-        body: botao(),
+        body: letras(),
       );
 }
 
-Widget botao() {
+Widget letras() {
   return Center(
-    child: Padding(
-      padding: const EdgeInsets.fromLTRB(10, 40, 10, 10),
-      child: Column(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          ElevatedButton(
-              style: ButtonStyle(
-                backgroundColor: MaterialStatePropertyAll<Color>(
-                    Color.fromARGB(255, 238, 149, 161)),
-                padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-                    EdgeInsets.all(20)),
-                shape: MaterialStateProperty.all(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30.0),
-                  ),
-                ),
-              ),
-              onPressed: () {},
-              child: Text("Beneficios do leite Materno")),
-          SizedBox(height: 30),
-          ElevatedButton(
-              style: ButtonStyle(
-                backgroundColor: MaterialStatePropertyAll<Color>(
-                    Color.fromARGB(255, 238, 149, 161)),
-                padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
-                    EdgeInsets.all(20)),
-                shape: MaterialStateProperty.all(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30.0),
-                  ),
-                ),
-              ),
-              onPressed: () {},
-              child: Text(
-                "Importancia da amamentação",
-                textDirection: TextDirection.ltr,
-              )),
-        ],
+    child: Container(
+      margin: const EdgeInsets.all(15.0),
+      padding: const EdgeInsets.all(3.0),
+      height: 900,
+      child: Expanded(
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Text(
+            '''     A experiência de gerar um filho pode despertar diversas reações marcantes na vida da mulher, sendo estas fundamentais para a prática da amamentação exclusiva.
+            ''',
+            textAlign: TextAlign.center,
+            textDirection: TextDirection.ltr,
+            style: TextStyle(
+              color: Color.fromARGB(255, 238, 149, 161),
+              fontWeight: FontWeight.bold,
+              fontSize: 20.0,
+              letterSpacing: 3,
+              wordSpacing: 3,
+            ),
+          ),
+        ),
       ),
     ),
   );

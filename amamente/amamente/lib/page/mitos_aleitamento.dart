@@ -1,3 +1,6 @@
+import 'package:amamente/secundaryPage/existeLeiteFraco.dart';
+import 'package:amamente/secundaryPage/precisoComplementar.dart';
+import 'package:amamente/secundaryPage/precisoHigienizar.dart';
 import 'package:flutter/material.dart';
 
 class MitosAleitamento extends StatelessWidget {
@@ -9,11 +12,11 @@ class MitosAleitamento extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Color.fromARGB(255, 238, 149, 161),
         ),
-        body: botao(),
+        body: botao(context),
       );
 }
 
-Widget botao() {
+Widget botao(BuildContext context) {
   return Center(
     child: Padding(
       padding: const EdgeInsets.fromLTRB(10, 40, 10, 10),
@@ -32,7 +35,7 @@ Widget botao() {
                   ),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () => selectedItem(context, 0),
               child: Text(
                 "Preciso higienizar a mama toda vez quando for amamentar?",
                 textAlign: TextAlign.center,
@@ -49,7 +52,7 @@ Widget botao() {
                   ),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () => selectedItem(context, 1),
               child: Text(
                 "Existe leite fraco?",
                 textDirection: TextDirection.ltr,
@@ -67,7 +70,7 @@ Widget botao() {
                   ),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () => selectedItem(context, 2),
               child: Text(
                 "preciso complementar o leite com fórmula?",
                 textDirection: TextDirection.ltr,
@@ -76,4 +79,26 @@ Widget botao() {
       ),
     ),
   );
+}
+
+void selectedItem(BuildContext context, int index) {
+  Navigator.of(context).pop();
+
+  switch (index) {
+    case 0:
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => PrecisoHigienizar(),
+      ));
+      break;
+    case 1:
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => ExisteLeiteFraco(),
+      ));
+      break;
+    case 2:
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => PrecisoComplementar(),
+      ));
+      break;
+  }
 }

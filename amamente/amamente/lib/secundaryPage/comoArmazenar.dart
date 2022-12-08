@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class DoresMamilos extends StatelessWidget {
+class ComoArmazenar extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
-          title: Text('Dores nos mamilos'),
+          title: Text('Como Armazenar'),
           centerTitle: true,
           backgroundColor: Color.fromARGB(255, 238, 149, 161),
         ),

@@ -1,3 +1,7 @@
+import 'package:amamente/secundaryPage/causasCarie.dart';
+import 'package:amamente/secundaryPage/higienaBucal.dart';
+import 'package:amamente/secundaryPage/meiosPrevencao.dart';
+import 'package:amamente/secundaryPage/primeirosSinais.dart';
 import 'package:flutter/material.dart';
 
 class AleitamentoCarie extends StatelessWidget {
@@ -9,11 +13,11 @@ class AleitamentoCarie extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Color.fromARGB(255, 238, 149, 161),
         ),
-        body: botao(),
+        body: botao(context),
       );
 }
 
-Widget botao() {
+Widget botao(BuildContext context) {
   return Center(
     child: Padding(
       padding: const EdgeInsets.fromLTRB(10, 40, 10, 10),
@@ -32,7 +36,7 @@ Widget botao() {
                   ),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () => selectedItem(context, 0),
               child: Text(
                 "Causas",
                 textDirection: TextDirection.ltr,
@@ -49,7 +53,7 @@ Widget botao() {
                   ),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () => selectedItem(context, 1),
               child: Text(
                 "Primeiros sinais",
                 textDirection: TextDirection.ltr,
@@ -66,7 +70,7 @@ Widget botao() {
                   ),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () => selectedItem(context, 2),
               child: Text(
                 "Meios de prevenção",
                 textDirection: TextDirection.ltr,
@@ -83,7 +87,7 @@ Widget botao() {
                   ),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () => selectedItem(context, 3),
               child: Text(
                 "higiene bucal do bebê",
                 textDirection: TextDirection.ltr,
@@ -92,4 +96,31 @@ Widget botao() {
       ),
     ),
   );
+}
+
+void selectedItem(BuildContext context, int index) {
+  Navigator.of(context).pop();
+
+  switch (index) {
+    case 0:
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => CausaCaries(),
+      ));
+      break;
+    case 1:
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => PrimeirosSinais(),
+      ));
+      break;
+    case 2:
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => MeiosPrevencao(),
+      ));
+      break;
+    case 3:
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => HigienaBucal(),
+      ));
+      break;
+  }
 }
