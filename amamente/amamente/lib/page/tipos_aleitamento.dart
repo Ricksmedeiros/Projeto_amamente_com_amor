@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../secundaryPage/exclusivo.dart';
 
 class TiposDeAleitamento extends StatelessWidget {
   @override
@@ -9,11 +10,11 @@ class TiposDeAleitamento extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Color.fromARGB(255, 238, 149, 161),
         ),
-        body: botao(),
+        body: botao(context),
       );
 }
 
-Widget botao() {
+Widget botao(BuildContext context) {
   return Center(
     child: Padding(
       padding: const EdgeInsets.fromLTRB(10, 40, 10, 10),
@@ -32,7 +33,7 @@ Widget botao() {
                   ),
                 ),
               ),
-              onPressed: () {},
+              onPressed: () => selectedItem(context, 0),
               child: Text(
                 "Exclusivo",
                 textDirection: TextDirection.ltr,
@@ -91,4 +92,16 @@ Widget botao() {
       ),
     ),
   );
+}
+
+void selectedItem(BuildContext context, int index) {
+  Navigator.of(context).pop();
+
+  switch (index) {
+    case 0:
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => Exclusivo(),
+      ));
+      break;
+  }
 }
