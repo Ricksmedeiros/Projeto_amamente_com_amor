@@ -39,8 +39,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String istapped = '';
-  double x = 1.0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,18 +50,24 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Column(
         children: <Widget>[
           Expanded(
-            child: SingleChildScrollView(
-                child: Column(
+            child: Column(
               children: [
+                SizedBox(
+                  height: 30,
+                ),
                 GestureDetector(
                   onTap: () {
                     Navigator.of(context).pushNamed('/amamentacao');
                   },
                   child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(90)),
+                      color: Color.fromARGB(255, 238, 149, 161),
+                    ),
                     alignment: Alignment.centerLeft,
-                    padding: const EdgeInsets.all(50),
-                    height: 200,
-                    color: Color.fromARGB(255, 219, 124, 137),
+                    padding: const EdgeInsets.all(15),
+                    height: 100,
+                    width: 400,
                     child: Row(
                       children: <Widget>[
                         Image.asset(
@@ -71,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           height: 45,
                         ),
                         const SizedBox(
-                          height: 20,
+                          height: 10,
                         ),
                         const Text(
                           'Amamentação',
@@ -88,19 +92,29 @@ class _MyHomePageState extends State<MyHomePage> {
                               fontWeight: FontWeight.bold,
                               color: Colors.white),
                         ),
+                        SizedBox(
+                          height: 50,
+                        ),
                       ],
                     ),
                   ),
+                ),
+                SizedBox(
+                  height: 30,
                 ),
                 GestureDetector(
                   onTap: () {
                     Navigator.of(context).pushNamed('/ordenha');
                   },
                   child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(90)),
+                      color: Color.fromARGB(255, 238, 149, 161),
+                    ),
                     alignment: Alignment.centerLeft,
-                    padding: const EdgeInsets.all(50),
-                    height: 200,
-                    color: Color.fromARGB(255, 245, 142, 156),
+                    padding: const EdgeInsets.all(15),
+                    height: 100,
+                    width: 400,
                     child: Row(
                       children: <Widget>[
                         Image.asset('assets/images/logo.png'),
@@ -125,15 +139,22 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                 ),
+                SizedBox(
+                  height: 30,
+                ),
                 GestureDetector(
                   onTap: () {
                     Navigator.of(context).pushNamed('/cuidadoRecemNascidos');
                   },
                   child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(90)),
+                      color: Color.fromARGB(255, 238, 149, 161),
+                    ),
                     alignment: Alignment.centerLeft,
-                    padding: const EdgeInsets.all(40),
-                    height: 200,
-                    color: Color.fromARGB(255, 241, 164, 174),
+                    padding: const EdgeInsets.all(15),
+                    height: 100,
+                    width: 400,
                     child: Row(
                       children: <Widget>[
                         Image.asset('assets/images/logo.png'),
@@ -158,15 +179,22 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                 ),
+                SizedBox(
+                  height: 30,
+                ),
                 GestureDetector(
                   onTap: () {
                     Navigator.of(context).pushNamed('/sobreNos');
                   },
                   child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(120)),
+                      color: Color.fromARGB(255, 238, 149, 161),
+                    ),
                     alignment: Alignment.centerLeft,
-                    padding: const EdgeInsets.all(50),
-                    height: 200,
-                    color: Color.fromARGB(255, 247, 174, 184),
+                    padding: const EdgeInsets.all(15),
+                    height: 100,
+                    width: 400,
                     child: Row(
                       children: <Widget>[
                         Image.asset('assets/images/logo.png'),
@@ -191,8 +219,11 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                 ),
+                SizedBox(
+                  height: 30,
+                ),
               ],
-            )),
+            ),
           ),
           Container(
             height: 50,
